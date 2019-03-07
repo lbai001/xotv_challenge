@@ -10,7 +10,7 @@ class FooterContent extends Component {
         return (
             <div className="icons-list">
             <div style={{fontSize: 30}}>
-                <IconFont type="icon-facebook" />
+                <a href="http://facebook.com"><IconFont type="icon-facebook" /></a>
             </div>
                 Annie ©2019 Created by Xiaolu Bai
             </div>
