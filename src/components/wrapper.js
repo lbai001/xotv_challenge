@@ -41,7 +41,7 @@ class Wrapper extends Component {
                         {photos.length? <UserPhotos data={photos}/> : <EmptyState message={currentUser ? "This user doesnt have any photos" : "Do a search"} />}
                     </Content>
                 </Layout>
-                <Footer><FooterContent /></Footer>
+                <Footer style={{ textAlign: 'center' }}><FooterContent /></Footer>
 
             </Layout>
         )

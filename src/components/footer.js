@@ -9,9 +9,10 @@ class FooterContent extends Component {
     render () {
         return (
             <div className="icons-list">
-                <IconFont type="icon-tuichu" />
+            <div style={{fontSize: 30}}>
                 <IconFont type="icon-facebook" />
-                <IconFont type="icon-twitter" />
+            </div>
+                Annie ©2019 Created by Xiaolu Bai
             </div>
         )
     }
