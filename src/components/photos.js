@@ -1,24 +1,21 @@
 import React, { Component } from 'react';
-import { Avatar, Divider, Row, Col} from 'antd';
+import { Card } from 'antd';
 import EmptyState from './emptyState';
 
 class UserPhotos extends Component {
-    renderPhotos = () => {
-        const {data} = this.props;
-        return data.map((v, k) => {
-            return (
-                <Col span={6} key={k}>
-                    <a href={v.urls.raw}>
-                        <img src={v.urls.thumb} alt={v.urls.small} />
-                    </a>
-                </Col>
-            )
-        })
-    }
+
 
     render () {
-        const {data} = this.props;
-        return <Row>{this.renderPhotos()}</Row>
+        const { data } = this.props;
+        return (
+          <Card loading={!data.length} title="Photos">
+            {data.map((v,k) => (
+              <Card.Grid style={{ width: 'auto'}}>
+                <img src={v.urls.thumb} alt={v.urls.small} />
+              </Card.Grid>
+            ))}
+          </Card>
+        )
     }
 }
 

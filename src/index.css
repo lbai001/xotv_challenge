@@ -3,9 +3,9 @@
   max-height: 100vh;
   min-height: 100vh;
   overflow: hidden;
-  background-color: #FFF;
   width: 320px;
 }
+
 .searchBar {
   padding: 0.5em;
 }
@@ -13,8 +13,13 @@
 .userList {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   height: calc(100vh - (32px + 1em));
+  overflow-y: scroll;
 }
 
-.photoList {
-  padding: 0.5em
+.ant-empty.emptyUserList {
+  margin: 2rem 8px;
+}
+
+.ant-empty.emptyPhotos {
+  margin: 8rem 8px;
 }

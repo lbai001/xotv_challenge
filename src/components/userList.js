@@ -1,29 +1,29 @@
 import React, { Component } from 'react';
-import { Avatar, Divider, Row, Col } from 'antd';
+import { Avatar, Empty, List } from 'antd';
 
 class UserList extends Component {
-    renderList = () => {
-        const {data} = this.props;
-        return data.results.map((v, k) => {
-            return (
-                <div key={k} onClick={() => this.props.getUserPhotos(v.username)}>
-                <Row style={{padding: 20}}>
-                    <Col span={6}>
-                        <Avatar src={v.profile_image.small} />
-                    </Col>
-                    <Col span={18}>
-                        <p>{v.name}</p>
-                    </Col>
-                </Row>
-                <Divider />
-                </div>
-            )
-        })
-    }
-
     render () {
-        const {data} = this.props;
-        return data.results? this.renderList() : null;
+        const {data, searching} = this.props;
+        if (data && data.results && data.results.length || searching) {
+          return (
+            <List
+              loading={searching}
+              dataSource={data.results}
+              renderItem={item => (
+                <List.Item onClick={() => this.props.getUserPhotos(item.username)}>
+                  <List.Item.Meta
+                    avatar={<Avatar src={item.profile_image.small} />}
+                    title={item.name}
+                   />
+                </List.Item>
+                )}
+              />
+            )
+        } else {
+          return (
+            <Empty className="emptyUserList" description={"No user results found."} />
+          )
+        }
     }
 }
 

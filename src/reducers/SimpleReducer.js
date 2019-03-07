@@ -1,16 +1,23 @@
-const initialState = { 
+const initialState = {
     users: [],
     photos: [],
     currentUser: false,
-    error: null
+    error: null,
+    searching: false
   }
-  
+
   export default (state = initialState, action) => {
     switch (action.type) {
+      case 'SEARCHING':
+        return {
+          ...state,
+          searching: true
+        }
       case 'LIST_USERS':
         return {
             ...state,
-            users: action.payload
+            users: action.payload,
+            searching: false
         }
       case 'USER_PHOTOS':
         return {
