@@ -12,6 +12,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Reducers
 - Simplereducer handles data storage, you could find userList and photos mounted to the store after the actions are called. Errors are also mounted in the Errors section of the store.
 
+## Styles
+- Style library used : ant design component library
+
+## Things could do better
+- Hide keys in env variables
+- photo grid needs to be styled according to photo size 
+
 ## Available Scripts
 
 In the project directory, you can run:

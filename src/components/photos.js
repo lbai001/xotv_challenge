@@ -7,7 +7,7 @@ class UserPhotos extends Component {
         const {data} = this.props;
         return data.map((v, k) => {
             return (
-                <Col span={8} key={k}>
+                <Col span={6} key={k}>
                     <a href={v.urls.raw}>
                         <img src={v.urls.thumb} alt={v.urls.small} />
                     </a>
