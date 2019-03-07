@@ -37,7 +37,7 @@ class Wrapper extends Component {
                             <UserList data={users} getUserPhotos={this.getUserPhotos}/>
                         </div>
                     </Sider>
-                    <Content>
+                    <Content className="photoList">
                         {photos.length? <UserPhotos data={photos}/> : <EmptyState message={currentUser ? "This user doesnt have any photos" : "Do a search"} />}
                     </Content>
                 </Layout>
