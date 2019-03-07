@@ -10,7 +10,7 @@ class UserList extends Component {
               loading={searching}
               dataSource={data.results}
               renderItem={item => (
-                <List.Item onClick={() => this.props.getUserPhotos(item.username)}>
+                <List.Item onClick={() => this.props.getUserPhotos(item.username)} style={{pointer: 'cursor'}}>
                   <List.Item.Meta
                     avatar={<Avatar src={item.profile_image.small} />}
                     title={item.name}

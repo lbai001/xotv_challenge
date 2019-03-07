@@ -1,8 +1,8 @@
 import Unsplash, { toJson } from "unsplash-js";
 
 const unsplash = new Unsplash({
-  applicationId: "aa2f3c3be8125f1fc86e3007153420c4e446c19b7b0c6d80a6257b281c9a0dc5",
-  secret: "a5ab4ed2efdc772dca8d5636a26c0d897907df38cd92baa9067e57093d9596b5"
+  applicationId: "a3489a0532d81edf297078780f3e7a1f46d5dce0ce695747c829c55980251def",
+  secret: "0c434c7582ccd241304e3e2970dc0ed18a38aefe485f73e3df450237512c45f6"
 });
 
 export const getUsers = (user) => dispatch => {
