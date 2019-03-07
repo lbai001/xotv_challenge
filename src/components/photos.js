@@ -11,7 +11,7 @@ class UserPhotos extends Component {
           <Card loading={!data.length} title="Photos">
             {data.map((v,k) => (
               <Card.Grid style={{ width: 'auto'}}>
-                <img src={v.urls.thumb} alt={v.urls.small} />
+                <a href={v.urls.raw}><img src={v.urls.thumb} alt={v.urls.small} /></a>
               </Card.Grid>
             ))}
           </Card>
